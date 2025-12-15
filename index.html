@@ -261,6 +261,20 @@ function youtubeSearch() {
   const q = document.getElementById('youtube-search').value.trim();
   if (q) window.open('https://www.youtube.com/results?search_query=' + encodeURIComponent(q));
 }
+  // 🔽 ENTER KODLARI BURADA
+  document.getElementById('google-search')
+    .addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') {
+        googleSearch();
+      }
+    });
+
+  document.getElementById('youtube-search')
+    .addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') {
+        youtubeSearch();
+      }
+    });
 </script>
 
 </body>
